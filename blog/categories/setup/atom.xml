@@ -4,7 +4,7 @@
   <title><![CDATA[Category: setup | rudiCode]]></title>
   <link href="http://rudicode.github.io/blog/categories/setup/atom.xml" rel="self"/>
   <link href="http://rudicode.github.io/"/>
-  <updated>2015-01-20T14:56:57-05:00</updated>
+  <updated>2015-01-20T15:10:37-05:00</updated>
   <id>http://rudicode.github.io/</id>
   <author>
     <name><![CDATA[Rudi Luzar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Set up your Gemfile with groups for your dependencies]]></title>
+    <title type="html"><![CDATA[Set up your Gemfile dependencies using groups]]></title>
     <link href="http://rudicode.github.io/blog/2014/12/04/set-up-gemfile-with-groups-for-development-and-testing/"/>
     <updated>2014-12-04T20:52:33-05:00</updated>
     <id>http://rudicode.github.io/blog/2014/12/04/set-up-gemfile-with-groups-for-development-and-testing</id>
