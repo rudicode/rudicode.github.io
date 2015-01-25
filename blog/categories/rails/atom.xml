@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails | rudiCode]]></title>
   <link href="http://rudicode.github.io/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://rudicode.github.io/"/>
-  <updated>2015-01-20T15:13:08-05:00</updated>
+  <updated>2015-01-25T12:11:46-05:00</updated>
   <id>http://rudicode.github.io/</id>
   <author>
     <name><![CDATA[Rudi Luzar]]></name>
@@ -71,6 +71,57 @@ Organizing the gems in groups gives you different ways to run bundler.</p>
   gem 'factory_girl_rails', "~&gt; 4.0"
 end
 </code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails Migrations: List of table column types]]></title>
+    <link href="http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types/"/>
+    <updated>2014-10-20T13:59:06-04:00</updated>
+    <id>http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types</id>
+    <content type="html"><![CDATA[<p>This list was compiled from rails 4, but may also be valid in earlier versions of rails. Use Active Record migrations to alter your database in a structured and organized manner.</p>
+
+<p>List of attributes for SQL types:</p>
+
+<pre><code class="ruby list_column_types.rb">  :binary
+  :boolean
+  :date
+  :datetime
+  :decimal
+  :float
+  :integer
+  :primary_key
+  :string
+  :text
+  :time
+</code></pre>
+
+<!-- more -->
+
+
+<p>You may also use database specific types, however this is not database agnostic and is to be used with caution.</p>
+
+<pre><code class="ruby migration_create_races.rb">class CreateRaces &lt; ActiveRecord::Migration
+  def change
+    create_table :races do |t|
+      t.datetime :date
+      t.integer :track_id
+      t.string :name
+
+      t.timestamps
+    end
+  end
+end
+</code></pre>
+
+<pre><code class="ruby migration_add_round_to_races.rb">class AddRoundToRaces &lt; ActiveRecord::Migration
+  def change
+    add_column :races, :round, :integer
+  end
+end
+</code></pre>
+
+<p>These are documented under column in the <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html#method-i-column" title="Active Record API">Active Record API.</a></p>
 ]]></content>
   </entry>
   

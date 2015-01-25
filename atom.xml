@@ -4,7 +4,7 @@
   <title><![CDATA[rudiCode]]></title>
   <link href="http://rudicode.github.io/atom.xml" rel="self"/>
   <link href="http://rudicode.github.io/"/>
-  <updated>2015-01-20T15:13:08-05:00</updated>
+  <updated>2015-01-25T12:11:46-05:00</updated>
   <id>http://rudicode.github.io/</id>
   <author>
     <name><![CDATA[Rudi Luzar]]></name>
@@ -105,6 +105,89 @@ Organizing the gems in groups gives you different ways to run bundler.</p>
 </span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails Migrations: List of table column types]]></title>
+    <link href="http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types/"/>
+    <updated>2014-10-20T13:59:06-04:00</updated>
+    <id>http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types</id>
+    <content type="html"><![CDATA[<p>This list was compiled from rails 4, but may also be valid in earlier versions of rails. Use Active Record migrations to alter your database in a structured and organized manner.</p>
+
+<p>List of attributes for SQL types:</p>
+
+<figure class='code'><figcaption><span>list_column_types.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="ss">:binary</span>
+</span><span class='line'>  <span class="ss">:boolean</span>
+</span><span class='line'>  <span class="ss">:date</span>
+</span><span class='line'>  <span class="ss">:datetime</span>
+</span><span class='line'>  <span class="ss">:decimal</span>
+</span><span class='line'>  <span class="ss">:float</span>
+</span><span class='line'>  <span class="ss">:integer</span>
+</span><span class='line'>  <span class="ss">:primary_key</span>
+</span><span class='line'>  <span class="ss">:string</span>
+</span><span class='line'>  <span class="ss">:text</span>
+</span><span class='line'>  <span class="ss">:time</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<p>You may also use database specific types, however this is not database agnostic and is to be used with caution.</p>
+
+<figure class='code'><figcaption><span>migration_create_races.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">CreateRaces</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">change</span>
+</span><span class='line'>    <span class="n">create_table</span> <span class="ss">:races</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">datetime</span> <span class="ss">:date</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">integer</span> <span class="ss">:track_id</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:name</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">timestamps</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>migration_add_round_to_races.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">AddRoundToRaces</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">change</span>
+</span><span class='line'>    <span class="n">add_column</span> <span class="ss">:races</span><span class="p">,</span> <span class="ss">:round</span><span class="p">,</span> <span class="ss">:integer</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>These are documented under column in the <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html#method-i-column" title="Active Record API">Active Record API.</a></p>
 ]]></content>
   </entry>
   

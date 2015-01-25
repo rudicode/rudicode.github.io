@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>rudiCode</title>
+  <title>Rails Migrations: List of table column types - rudiCode</title>
   <meta name="author" content="Rudi Luzar">
 
   
-  <meta name="description" content="Grouping your dependencies in your Gemfile A typical rails app makes use of many gems. But is it necessary to install or add all of them to the load &hellip;">
+  <meta name="description" content="This list was compiled from rails 4, but may also be valid in earlier versions of rails. Use Active Record migrations to alter your database in a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rudicode.github.io/">
+  <link rel="canonical" href="http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,60 +65,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/12/04/set-up-gemfile-with-groups-for-development-and-testing/">Set Up Your Gemfile Dependencies Using Groups</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-04T20:52:33-05:00" pubdate data-updated="true"></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>Grouping your dependencies in your Gemfile</h3>
-
-<p>  A typical rails app makes use of many gems. But is it necessary to install or add all of them to the load path?
-  In most cases the answer is no.</p>
-
-<p>  Here is a typical example:
-  </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/04/set-up-gemfile-with-groups-for-development-and-testing/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/10/20/rails-migrations-list-of-table-column-types/">Rails Migrations: List of Table Column Types</a></h1>
+      <h1 class="entry-title">Rails Migrations: List of Table Column Types</h1>
     
     
       <p class="meta">
@@ -141,7 +93,7 @@
   </header>
 
 
-  <div class="entry-content"><p>This list was compiled from rails 4, but may also be valid in earlier versions of rails. Use Active Record migrations to alter your database in a structured and organized manner.</p>
+<div class="entry-content"><p>This list was compiled from rails 4, but may also be valid in earlier versions of rails. Use Active Record migrations to alter your database in a structured and organized manner.</p>
 
 <p>List of attributes for SQL types:</p>
 
@@ -170,23 +122,106 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
+<!-- more -->
+
+
+<p>You may also use database specific types, however this is not database agnostic and is to be used with caution.</p>
+
+<figure class='code'><figcaption><span>migration_create_races.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">CreateRaces</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">change</span>
+</span><span class='line'>    <span class="n">create_table</span> <span class="ss">:races</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">datetime</span> <span class="ss">:date</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">integer</span> <span class="ss">:track_id</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:name</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">timestamps</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>migration_add_round_to_races.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">AddRoundToRaces</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">change</span>
+</span><span class='line'>    <span class="n">add_column</span> <span class="ss">:races</span><span class="p">,</span> <span class="ss">:round</span><span class="p">,</span> <span class="ss">:integer</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>These are documented under column in the <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html#method-i-column" title="Active Record API">Active Record API.</a></p>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/10/20/rails-migrations-list-of-table-column-types/">Read on &rarr;</a>
-    </footer>
+
+<span class="byline author vcard">Posted by <span class="fn">Rudi Luzar</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2014-10-20T13:59:06-04:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
   
-  <div class="pagination">
+    <a class='category' href='/blog/categories/migrations/'>migrations</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rails4/'>rails4</a>
+  
+</span>
+
+
+    </p>
     
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types/" data-via="rudicode" data-counturl="http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types/" >Tweet</a>
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/12/04/set-up-gemfile-with-groups-for-development-and-testing/" title="Next Post: Set up your Gemfile dependencies using groups">Set up your Gemfile dependencies using groups &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -239,6 +274,7 @@
 
   
 </aside>
+
 
     </div>
   </div>
