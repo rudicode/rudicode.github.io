@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title></title>
+    <description></description>    
+    <link>http://rudicode.github.io</link>
+    <atom:link href="http://rudicode.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Set up your Gemfile dependencies using groups</title>
+                
+        
+          <description>&lt;h3&gt;Grouping your dependencies in your Gemfile&lt;/h3&gt;
+
+&lt;p&gt;  A typical rails app makes use of many gems. But is it necessary to install or add all of them to the load path?
+  In most cases the answer is no.&lt;/p&gt;
+
+&lt;p&gt;  Here is a typical example:&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 04 Dec 2014 20:52:33 -0500</pubDate>
+        <link>http://rudicode.github.io/blog/2014/12/04/set-up-gemfile-with-groups-for-development-and-testing/</link>
+        <guid isPermaLink="true">http://rudicode.github.io/blog/2014/12/04/set-up-gemfile-with-groups-for-development-and-testing/</guid>
+      </item>
+    
+      <item>
+        <title>Rails Migrations: List of table column types</title>
+                
+        
+          <description>&lt;p&gt;This list was compiled from rails 4, but may also be valid in earlier versions of rails. Use Active Record migrations to alter your database in a structured and organized manner.&lt;/p&gt;
+
+&lt;p&gt;List of attributes for SQL types:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;ruby list_column_types.rb&quot;&gt;  :binary
+  :boolean
+  :date
+  :datetime
+  :decimal
+  :float
+  :integer
+  :primary_key
+  :string
+  :text
+  :time
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!&#8211; more &#8211;&gt;
+
+
+&lt;p&gt;You may also use database specific types, however this is not database agnostic and is to be used with caution.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;ruby migration_create_races.rb&quot;&gt;class CreateRaces &amp;lt; ActiveRecord::Migration
+  def change
+    create_table :races do |t|
+      t.datetime :date
+      t.integer :track_id
+      t.string :name
+
+      t.timestamps
+    end
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;ruby migration_add_round_to_races.rb&quot;&gt;class AddRoundToRaces &amp;lt; ActiveRecord::Migration
+  def change
+    add_column :races, :round, :integer
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These are documented under column in the &lt;a href=&quot;http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html#method-i-column&quot; title=&quot;Active Record API&quot;&gt;Active Record API.&lt;/a&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 20 Oct 2014 13:59:06 -0400</pubDate>
+        <link>http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types/</link>
+        <guid isPermaLink="true">http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types/</guid>
+      </item>
+    
+  </channel>
+</rss>
