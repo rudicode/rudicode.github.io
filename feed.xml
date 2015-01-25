@@ -77,5 +77,48 @@ end
         <guid isPermaLink="true">http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types/</guid>
       </item>
     
+      <item>
+        <title>The problem with Pingdom</title>
+                
+        
+          <description>&lt;div class=&#39;bogus-wrapper&#39;&gt;&lt;notextile&gt;&lt;figure class=&#39;code&#39;&gt;&lt;figcaption&gt;&lt;span&gt;Controller Sample - review.rb &lt;/span&gt;&lt;/figcaption&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class=&#39;line-number&#39;&gt;1&lt;/span&gt;
+&lt;span class=&#39;line-number&#39;&gt;2&lt;/span&gt;
+&lt;span class=&#39;line-number&#39;&gt;3&lt;/span&gt;
+&lt;span class=&#39;line-number&#39;&gt;4&lt;/span&gt;
+&lt;span class=&#39;line-number&#39;&gt;5&lt;/span&gt;
+&lt;span class=&#39;line-number&#39;&gt;6&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#39;code&#39;&gt;&lt;pre&gt;&lt;code class=&#39;rb&#39;&gt;&lt;span class=&#39;line&#39;&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#39;line&#39;&gt;    &lt;span class=&quot;vi&quot;&gt;@product&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Product&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#39;line&#39;&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_user&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#39;line&#39;&gt;      &lt;span class=&quot;vi&quot;&gt;@review&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@product&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reviews&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#39;line&#39;&gt;    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#39;line&#39;&gt;  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://www.pingdom.com%20Pingdom&quot;&gt;The problem with pingdom.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;My money&amp;rsquo;s in that office, right? If she start giving me some bullshit about it ain&amp;rsquo;t there, and we got to go someplace else and get it, I&amp;rsquo;m gonna shoot you in the head then and there. Then I&amp;rsquo;m gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I&amp;rsquo;m talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Blockquote is what goes
+inside this block here
+would you believe that
+bullshit?&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Well, the way they make shows is, they make one show. That show&amp;rsquo;s called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they&amp;rsquo;re going to make more shows. Some pilots get picked and become television programs. Some don&amp;rsquo;t, become nothing. She starred in one of the ones that became nothing.&lt;/p&gt;
+
+&lt;p&gt;The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother&amp;rsquo;s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.&lt;/p&gt;
+
+&lt;p&gt;Your bones don&amp;rsquo;t break, mine do. That&amp;rsquo;s clear. Your cells react to bacteria and viruses differently than mine. You don&amp;rsquo;t get sick, I do. That&amp;rsquo;s also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We&amp;rsquo;re on the same curve, just on opposite ends.&lt;/p&gt;
+
+&lt;p&gt;Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that&amp;rsquo;s what you see at a toy store. And you must think you&amp;rsquo;re in a toy store, because you&amp;rsquo;re here shopping for an infant named Jeb.&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 22 Jul 2013 19:13:00 -0400</pubDate>
+        <link>http://rudicode.github.io/blog/2013/07/22/the-problem-with-pingdom/</link>
+        <guid isPermaLink="true">http://rudicode.github.io/blog/2013/07/22/the-problem-with-pingdom/</guid>
+      </item>
+    
   </channel>
 </rss>
