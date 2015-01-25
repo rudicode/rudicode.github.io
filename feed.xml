@@ -44,10 +44,10 @@
   :time
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;You may also use database specific types, however this is not database agnostic and is to be used with caution.&lt;/p&gt;
+
 &lt;!&#8211; more &#8211;&gt;
 
-
-&lt;p&gt;You may also use database specific types, however this is not database agnostic and is to be used with caution.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;ruby migration_create_races.rb&quot;&gt;class CreateRaces &amp;lt; ActiveRecord::Migration
   def change

@@ -4,7 +4,7 @@
   <title><![CDATA[rudiCode]]></title>
   <link href="http://rudicode.github.io/atom.xml" rel="self"/>
   <link href="http://rudicode.github.io/"/>
-  <updated>2015-01-25T16:15:10-05:00</updated>
+  <updated>2015-01-25T16:33:37-05:00</updated>
   <id>http://rudicode.github.io/</id>
   <author>
     <name><![CDATA[Rudi Luzar]]></name>
@@ -142,10 +142,12 @@ Organizing the gems in groups gives you different ways to run bundler.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>You may also use database specific types, however this is not database agnostic and is to be used with caution.</p>
+
 <!-- more -->
 
 
-<p>You may also use database specific types, however this is not database agnostic and is to be used with caution.</p>
+
 
 <figure class='code'><figcaption><span>migration_create_races.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
