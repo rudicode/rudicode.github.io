@@ -4,7 +4,7 @@
   <title><![CDATA[rudiCode]]></title>
   <link href="http://rudicode.github.io/atom.xml" rel="self"/>
   <link href="http://rudicode.github.io/"/>
-  <updated>2015-01-25T16:43:16-05:00</updated>
+  <updated>2015-01-26T10:21:58-05:00</updated>
   <id>http://rudicode.github.io/</id>
   <author>
     <name><![CDATA[Rudi Luzar]]></name>
@@ -109,6 +109,76 @@ Organizing the gems in groups gives you different ways to run bundler.</p>
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Common Rake Tasks for Rails Projects]]></title>
+    <link href="http://rudicode.github.io/blog/2014/12/04/common-rake-tasks-for-rails/"/>
+    <updated>2014-12-04T20:52:33-05:00</updated>
+    <id>http://rudicode.github.io/blog/2014/12/04/common-rake-tasks-for-rails</id>
+    <content type="html"><![CDATA[<h3>Common Rake Tasks</h3>
+
+<p>Display rake Tasks, That have a description</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="o">-</span><span class="n">T</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!--more-->
+
+
+<p>To display ALL Rake tasks, even ones without descriptions, such as rake db:reset Try this to make above easier</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="o">-</span><span class="n">P</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">rake</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Try adding this alias to your shell startup script.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">alias</span> <span class="n">rakep</span><span class="o">=</span><span class="s2">&quot;rake -P | grep rake&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To show your Rails routing info</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="n">routes</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To run your specs or tests</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you need to migrate the database, after schema changes. Also when you are first starting a project and you need to create the database.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="n">migrate</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Most migrations, are reversible, which means we can “migrate down” and undo them with a single Rake task</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="n">rollback</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create a test database with the correct structure. So that we can do testing on a separate db.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">rake</span> <span class="ss">db</span><span class="p">:</span><span class="nb">test</span><span class="ss">:prepare</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Rails Migrations: List of table column types]]></title>
     <link href="http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types/"/>
     <updated>2014-10-20T13:59:06-04:00</updated>
@@ -142,12 +212,8 @@ Organizing the gems in groups gives you different ways to run bundler.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>You may also use database specific types, however this is not database agnostic and is to be used with caution.</p>
-
-<!-- more -->
-
-
-
+<p>  You may also use database specific types, however this is not database agnostic and is to be used with caution.
+  <!--more--></p>
 
 <figure class='code'><figcaption><span>migration_create_races.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails | rudiCode]]></title>
   <link href="http://rudicode.github.io/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://rudicode.github.io/"/>
-  <updated>2015-01-25T16:43:16-05:00</updated>
+  <updated>2015-01-26T10:21:58-05:00</updated>
   <id>http://rudicode.github.io/</id>
   <author>
     <name><![CDATA[Rudi Luzar]]></name>
@@ -75,6 +75,58 @@ end
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Common Rake Tasks for Rails Projects]]></title>
+    <link href="http://rudicode.github.io/blog/2014/12/04/common-rake-tasks-for-rails/"/>
+    <updated>2014-12-04T20:52:33-05:00</updated>
+    <id>http://rudicode.github.io/blog/2014/12/04/common-rake-tasks-for-rails</id>
+    <content type="html"><![CDATA[<h3>Common Rake Tasks</h3>
+
+<p>Display rake Tasks, That have a description
+<code>ruby
+rake -T
+</code></p>
+
+<!--more-->
+
+
+<p>To display ALL Rake tasks, even ones without descriptions, such as rake db:reset Try this to make above easier
+<code>ruby
+rake -P | grep rake
+</code></p>
+
+<p>Try adding this alias to your shell startup script.
+<code>ruby
+alias rakep="rake -P | grep rake"
+</code></p>
+
+<p>To show your Rails routing info
+<code>ruby
+rake routes
+</code></p>
+
+<p>To run your specs or tests
+<code>ruby
+rake
+</code></p>
+
+<p>When you need to migrate the database, after schema changes. Also when you are first starting a project and you need to create the database.
+<code>ruby
+rake db:migrate
+</code></p>
+
+<p>Most migrations, are reversible, which means we can “migrate down” and undo them with a single Rake task
+<code>ruby
+rake db:rollback
+</code></p>
+
+<p>Create a test database with the correct structure. So that we can do testing on a separate db.
+<code>ruby
+rake db:test:prepare
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Rails Migrations: List of table column types]]></title>
     <link href="http://rudicode.github.io/blog/2014/10/20/rails-migrations-list-of-table-column-types/"/>
     <updated>2014-10-20T13:59:06-04:00</updated>
@@ -96,10 +148,8 @@ end
   :time
 </code></pre>
 
-<p>You may also use database specific types, however this is not database agnostic and is to be used with caution.</p>
-
-<!-- more -->
-
+<p>  You may also use database specific types, however this is not database agnostic and is to be used with caution.
+  <!--more--></p>
 
 <pre><code class="ruby migration_create_races.rb">class CreateRaces &lt; ActiveRecord::Migration
   def change

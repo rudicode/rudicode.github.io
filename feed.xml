@@ -24,6 +24,23 @@
       </item>
     
       <item>
+        <title>Common Rake Tasks for Rails Projects</title>
+                
+        
+          <description>&lt;h3&gt;Common Rake Tasks&lt;/h3&gt;
+
+&lt;p&gt;Display rake Tasks, That have a description
+&lt;code&gt;ruby
+rake -T
+&lt;/code&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 04 Dec 2014 20:52:33 -0500</pubDate>
+        <link>http://rudicode.github.io/blog/2014/12/04/common-rake-tasks-for-rails/</link>
+        <guid isPermaLink="true">http://rudicode.github.io/blog/2014/12/04/common-rake-tasks-for-rails/</guid>
+      </item>
+    
+      <item>
         <title>Rails Migrations: List of table column types</title>
                 
         
@@ -44,32 +61,7 @@
   :time
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;You may also use database specific types, however this is not database agnostic and is to be used with caution.&lt;/p&gt;
-
-&lt;!&#8211; more &#8211;&gt;
-
-
-&lt;pre&gt;&lt;code class=&quot;ruby migration_create_races.rb&quot;&gt;class CreateRaces &amp;lt; ActiveRecord::Migration
-  def change
-    create_table :races do |t|
-      t.datetime :date
-      t.integer :track_id
-      t.string :name
-
-      t.timestamps
-    end
-  end
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&quot;ruby migration_add_round_to_races.rb&quot;&gt;class AddRoundToRaces &amp;lt; ActiveRecord::Migration
-  def change
-    add_column :races, :round, :integer
-  end
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;These are documented under column in the &lt;a href=&quot;http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html#method-i-column&quot; title=&quot;Active Record API&quot;&gt;Active Record API.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;  You may also use database specific types, however this is not database agnostic and is to be used with caution.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 20 Oct 2014 13:59:06 -0400</pubDate>
