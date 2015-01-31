@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: test | rudiCode]]></title>
+  <link href="http://rudicode.github.io/blog/categories/test/atom.xml" rel="self"/>
+  <link href="http://rudicode.github.io/"/>
+  <updated>2015-01-31T11:31:40-05:00</updated>
+  <id>http://rudicode.github.io/</id>
+  <author>
+    <name><![CDATA[Rudi Luzar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[This is a test post.]]></title>
+    <link href="http://rudicode.github.io/blog/2014/12/04/test/"/>
+    <updated>2014-12-04T20:52:33-05:00</updated>
+    <id>http://rudicode.github.io/blog/2014/12/04/test</id>
+    <content type="html"><![CDATA[<h3>Test Post</h3>
+]]></content>
+  </entry>
+  
+</feed>
