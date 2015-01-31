@@ -13,9 +13,26 @@
           <description>&lt;h3&gt;Test Post&lt;/h3&gt;
 </description>
         
-        <pubDate>Thu, 04 Dec 2014 20:52:33 -0500</pubDate>
-        <link>http://rudicode.github.io/blog/2014/12/04/test/</link>
-        <guid isPermaLink="true">http://rudicode.github.io/blog/2014/12/04/test/</guid>
+        <pubDate>Thu, 01 Jan 2015 20:52:33 -0500</pubDate>
+        <link>http://rudicode.github.io/blog/2015/01/01/test/</link>
+        <guid isPermaLink="true">http://rudicode.github.io/blog/2015/01/01/test/</guid>
+      </item>
+    
+      <item>
+        <title>Common Rake Tasks for Rails Projects</title>
+                
+        
+          <description>&lt;h3&gt;Common Rake Tasks&lt;/h3&gt;
+
+&lt;p&gt;Display rake Tasks, That have a description
+&lt;code&gt;ruby
+rake -T
+&lt;/code&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 05 Dec 2014 20:52:33 -0500</pubDate>
+        <link>http://rudicode.github.io/blog/2014/12/05/common-rake-tasks-for-rails/</link>
+        <guid isPermaLink="true">http://rudicode.github.io/blog/2014/12/05/common-rake-tasks-for-rails/</guid>
       </item>
     
       <item>
@@ -33,23 +50,6 @@
         <pubDate>Thu, 04 Dec 2014 20:52:33 -0500</pubDate>
         <link>http://rudicode.github.io/blog/2014/12/04/set-up-gemfile-with-groups-for-development-and-testing/</link>
         <guid isPermaLink="true">http://rudicode.github.io/blog/2014/12/04/set-up-gemfile-with-groups-for-development-and-testing/</guid>
-      </item>
-    
-      <item>
-        <title>Common Rake Tasks for Rails Projects</title>
-                
-        
-          <description>&lt;h3&gt;Common Rake Tasks&lt;/h3&gt;
-
-&lt;p&gt;Display rake Tasks, That have a description
-&lt;code&gt;ruby
-rake -T
-&lt;/code&gt;&lt;/p&gt;
-</description>
-        
-        <pubDate>Thu, 04 Dec 2014 20:52:33 -0500</pubDate>
-        <link>http://rudicode.github.io/blog/2014/12/04/common-rake-tasks-for-rails/</link>
-        <guid isPermaLink="true">http://rudicode.github.io/blog/2014/12/04/common-rake-tasks-for-rails/</guid>
       </item>
     
       <item>
